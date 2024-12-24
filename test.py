@@ -184,7 +184,7 @@ def process(num, image):
         print(f"Image #{num} -- aspect_ratio={aspectRatio:.2f}, extent={extent:.2f}, solidity={solidity:.2f}, area={Area:.2f}")
         print(shape)
         
-        cv2.imshow(f"{num} Convex Hull", hullImage)
+        # cv2.imshow(f"{num} Convex Hull", hullImage)
         
         resized = imutils.resize(clone, width=image.shape[1] * 2, inter=cv2.INTER_LINEAR)
         cv2.imshow(f"Image {num}", resized)

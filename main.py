@@ -183,7 +183,7 @@ def process(image):
         # draw the shape name on the image
         cv2.putText(clone, shape, (x, y + 25), cv2.FONT_HERSHEY_SIMPLEX, 1, (240, 0, 159), 2)
         # show the contour properties
-        print("Image -- aspect_ratio={:.2f}, extent={:.2f}, solidity={:.2f}, area={:.2f}".format(aspectRatio, extent, solidity, Area))
+        print(f"Image {shape} -- aspect_ratio={aspectRatio:.2f}, extent={extent:.2f}, solidity={solidity:.2f}, area={Area:.2f}")
         
         resized = imutils.resize(clone, width=image.shape[1] * 2, inter=cv2.INTER_LINEAR)
         cv2.imshow("Image", resized)
